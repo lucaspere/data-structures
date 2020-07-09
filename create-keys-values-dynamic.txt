@@ -1,0 +1,21 @@
+const convertArrayOfObjIntoObj = (
+    arrayOfDocuments,
+    keyChain,
+    valueChain,
+) => {
+
+    const unchainedKeys = keyChain.split('.')
+    const unchainedValues = valueChain.split('.')
+    const newObject = {}
+
+    arrayOfDocuments.forEach(item => {
+        const actualObject: any = item
+
+        const key = unchainedKeys.reduce((accumulator, currentValue) => accumulator[currentValue], actualObject)
+        const value = unchainedValues.reduce((accumulator, currentValue) => accumulator[currentValue], actualObject)
+
+        newObject[key] = value
+    })
+
+    return newObject
+}
