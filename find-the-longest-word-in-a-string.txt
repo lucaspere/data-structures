@@ -5,4 +5,12 @@ function findLongestWordLength(str) {
   return longestWord.length;
 }
 
-console.log(findLongestWordLength("The quick brown fox jumped over the lazy dog"));
+findLongestWordLength("The quick brown fox jumped over the lazy dog");
+
+function findLongestWordLength(str) {
+  const x = str.split(" ").reduce((acc, cur) => acc.length > cur.length ? acc : cur)
+  return x.length;
+}
+
+findLongestWordLength("Google do a barrel roll");
+
