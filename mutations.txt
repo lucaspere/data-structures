@@ -1,0 +1,7 @@
+function mutation(arr) {
+const newArr = arr.map(word => word.toLowerCase())
+  const containsAllString = newArr[1].split("").every(letter => newArr[0].includes(letter))
+  return containsAllString;
+}
+
+mutation(["hello", "Hello"]);
