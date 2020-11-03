@@ -1,0 +1,8 @@
+function destroyer(arr) {
+  let [newArr, ...newArguments] = arguments
+  
+  const result = newArr.filter(item => !newArguments.includes(item) )
+  return result;
+}
+
+destroyer(["tree", "hamburger", 53], "tree", 53);
