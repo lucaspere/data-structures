@@ -1,0 +1,29 @@
+//USANDO PROGRESSÂO ARITMÉTICA
+function sumAll(arr) {
+  const sortedArr = arr.sort((a, b) => a - b);
+
+  const firstTerm = sortedArr[0];
+  const finalTerm = sortedArr[1];
+  const numberOfTerms = sortedArr[1] - sortedArr[0] + 1;
+
+  const sumOfPA = ((firstTerm + finalTerm) * numberOfTerms) / 2;
+
+  return sumOfPA;
+}
+
+sumAll([10, 5]);
+
+//USANDO FOR...LOOP
+function sumAll(arr) {
+  const sortedArr = arr.sort((a, b) => a - b);
+  let sumOfNumbers = 0;
+
+  for(let i = sortedArr[0]; i <= sortedArr[1]; i++) {
+    sumOfNumbers += i;
+  }
+
+  return sumOfNumbers;
+}
+
+sumAll([10, 5]);
+
